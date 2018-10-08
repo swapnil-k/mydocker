@@ -3,11 +3,12 @@ MAINTAINER Swapnil Khedekar
 WORKDIR /root
 
 # setting up UTF-8 encoding
+ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND "noninteractive"
 
 
-RUN apt-get update -q -q && \
+RUN apt-get update -qq && \
     apt-get install -y software-properties-common && \
     apt-get install -y apt-utils tzdata && \
     echo 'Asia/Calcutta' > /etc/timezone && \
@@ -29,4 +30,4 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
-CMD /bin/bash
+ENTRYPOINT /usr/sbin/sshd && /bin/bash

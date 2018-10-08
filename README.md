@@ -2,8 +2,10 @@
 * Customized ubuntu 16.04 image with necessarty basic packages for debug and ssh package for remote connection
 
 #### How to build image using Dockerfile
-* `docker build -t swapnilkhedekar/ubuntu:16.04 .`
+* `docker build -t swapnilkhedekar/ubuntu:16.04 ubuntu/.`
+* `docker build -t <yourname>/<yourreponame>:<tag> <path_of_Dockerfile>`
 
 #### Content:
 * Basic ubuntu packages for general software debug
 * SSH package for remote connection/debug
+* Setting Indian(GMT+5:30) timezone
