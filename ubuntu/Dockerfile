@@ -30,4 +30,8 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
+#### setting up public key
+RUN mkdir -p /root/.ssh
+COPY id_rsa.pub /root/.ssh/authorized_keys
+
 CMD ["/bin/sh", "-c", "/usr/sbin/sshd; lsb_release -a; /bin/bash"]
