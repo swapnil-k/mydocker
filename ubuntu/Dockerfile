@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Swapnil Khedekar
+MAINTAINER Swapnil Khedekar <swapnil.khedekar.25@gmail.com>
 WORKDIR /root
 
 # setting up UTF-8 encoding
@@ -30,4 +30,4 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
-ENTRYPOINT /usr/sbin/sshd && /bin/bash
+CMD ["/bin/sh", "-c", "/usr/sbin/sshd; lsb_release -a; /bin/bash"]
