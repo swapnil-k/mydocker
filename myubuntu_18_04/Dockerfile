@@ -21,4 +21,4 @@ RUN apt-get install -y dnsutils
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && apt-get autoremove -y
 
-CMD ["/bin/sh", "-c", "/usr/bin/lsb_release; /bin/bash"]
+CMD ["/bin/sh", "-c", "/usr/bin/lsb_release -a; /bin/bash"]

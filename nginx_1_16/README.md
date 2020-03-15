@@ -13,6 +13,7 @@
 * `docker run --rm --name nginx --hostname nginx -p 80:80 -d mynginx:1.16`
 
 #### Debugging
+
 * `docker exec -it nginx bash`
 * `docker logs nginx`
 
