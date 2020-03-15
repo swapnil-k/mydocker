@@ -1,6 +1,6 @@
-### Why:
+### Nginx
 
-* Customized nginx 1.16.1 image with necessary basic packages for debug and ssh package for remote connection
+* Customized `nginx 1.16.1` image with necessary basic packages for debug and ssh package for remote connection
 
 #### How to build an image
 
@@ -10,7 +10,7 @@
 #### How to run a container
 
 * `docker rm -f nginx`
-* `docker run --name nginx --hostname nginx -p 80:80 -d mynginx:1.16`
+* `docker run --rm --name nginx --hostname nginx -p 80:80 -d mynginx:1.16`
 
 #### Debugging
 * `docker exec -it nginx bash`
@@ -19,5 +19,5 @@
 #### Content
 
 * Basic ubuntu packages for general troubleshoot and debug
-* Setting Indian(GMT+5:30) timezone
-* Removed `sites-enabled` and `sites-available` for sake of simplicity
+* Setting `Indian(GMT+5:30)` timezone
+* Removed `sites-enabled` and `sites-available` directories for sake of simplicity

@@ -22,6 +22,6 @@ RUN sed -i 's/include\ \/etc\/nginx\/sites-enabled\/\*\;$/\#include\ \/etc\/ngin
 STOPSIGNAL SIGTERM
 
 EXPOSE 80
-#CMD ["nginx", "-g", "daemon off;"]
 
+#CMD ["nginx", "-g", "daemon off;"]
 CMD ["/bin/sh", "-c", "/usr/sbin/nginx -V; /usr/sbin/nginx -g 'daemon off;'"]
