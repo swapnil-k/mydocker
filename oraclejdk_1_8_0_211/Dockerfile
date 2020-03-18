@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM sk/ubuntu:18.04
 LABEL maintainer="swapnil.xxxx25@gmail.com"
 
 WORKDIR /opt

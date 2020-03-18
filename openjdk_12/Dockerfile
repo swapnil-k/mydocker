@@ -1,4 +1,4 @@
-FROM myubuntu:18.04
+FROM sk/ubuntu:18.04
 MAINTAINER Swapnil Khedekar <swapnil.xxxx25@gmail.com>
 
 ADD  https://download.java.net/java/GA/jdk12/33/GPL/openjdk-12_linux-x64_bin.tar.gz /opt/
