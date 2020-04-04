@@ -2,7 +2,7 @@
 
 * A bunch of dockerfiles of most common applications
 * Created for `dev/qa/uat/staging` and `prod` environments
-* If you want to clone the repository and commit into it then you probably required `git lfs`
+* If you want to clone the repository and commit into it then you probably require `git lfs`
   * LFS is `Large File Storage` an extension for git that keeps large files outside of the actual repository so it doesn't become slow
   * When the error says `not found on your path,` it means git was looking for a program that you don't have installed
   * You can install it using the instructions on [git-lfs.github.com website](https://git-lfs.github.com/ "git-lfs's Homepage")
@@ -17,6 +17,7 @@
 
 ##### How to run a container
 
+* `docker rm -f <container_name>`
 * `docker run --name <container_name> --rm --hostname <hostname> -p <host_port>:<container_port> -d <yourname>/<yourreponame>:<tag>`
   
 ##### Debugging
